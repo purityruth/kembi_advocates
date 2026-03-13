@@ -22,6 +22,7 @@ export interface PracticeArea {
   id: number;
   slug: string;
   title: { rendered: string };
+  excerpt?: { rendered: string };
   content: { rendered: string };
   acf?: any; // If you use Advanced Custom Fields
 }
