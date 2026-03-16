@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { practiceAreas, PracticeArea } from "./mockData"
+import { practiceAreas, PracticeArea, TeamMember, teamMembers } from "./mockData"
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_WP_API_URL,
@@ -54,6 +54,15 @@ export async function getPracticeArea(slug: string): Promise<PracticeArea | null
   return area || null
 }
 
+export async function getTeamMembers(): Promise<TeamMember[]> {
+  return teamMembers
+}
+
+export async function getTeamMember(slug: string): Promise<TeamMember | null> {
+  const member = teamMembers.find((m) => m.slug === slug)
+  return member || null
+}
+
 // Fetch functions
 export async function getPosts(): Promise<WPPost[]> {
   const { data } = await api.get('/posts?_embed');
@@ -75,15 +84,15 @@ export async function getPost(slug: string): Promise<WPPost> {
 //   return data[0];
 // }
 
-export async function getTeamMembers(): Promise<TeamMember[]> {
-  const { data } = await api.get('/team');
-  return data;
-}
+// export async function getTeamMembers(): Promise<TeamMember[]> {
+//   const { data } = await api.get('/team');
+//   return data;
+// }
 
-export async function getTeamMember(slug: string): Promise<TeamMember> {
-  const { data } = await api.get(`/team?slug=${slug}`);
-  return data[0];
-}
+// export async function getTeamMember(slug: string): Promise<TeamMember> {
+//   const { data } = await api.get(`/team?slug=${slug}`);
+//   return data[0];
+// }
 
 export async function getPage(slug: string): Promise<WPPost> {
   const { data } = await api.get(`/pages?slug=${slug}`);
