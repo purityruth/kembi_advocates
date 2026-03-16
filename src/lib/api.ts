@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import { practiceAreas, PracticeArea } from "./mockData"
+
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_WP_API_URL,
 });
@@ -18,14 +20,14 @@ export interface WPPost {
   };
 }
 
-export interface PracticeArea {
-  id: number;
-  slug: string;
-  title: { rendered: string };
-  excerpt?: { rendered: string };
-  content: { rendered: string };
-  acf?: any; // If you use Advanced Custom Fields
-}
+// export interface PracticeArea {
+//   id: number;
+//   slug: string;
+//   title: { rendered: string };
+//   excerpt?: { rendered: string };
+//   content: { rendered: string };
+//   acf?: any; // If you use Advanced Custom Fields
+// }
 
 export interface TeamMember {
   id: number;
@@ -40,6 +42,18 @@ export interface TeamMember {
   };
 }
 
+
+// GET ALL PRACTICE AREAS
+export async function getPracticeAreas(): Promise<PracticeArea[]> {
+  return practiceAreas
+}
+
+// GET SINGLE PRACTICE AREA
+export async function getPracticeArea(slug: string): Promise<PracticeArea | null> {
+  const area = practiceAreas.find((a) => a.slug === slug)
+  return area || null
+}
+
 // Fetch functions
 export async function getPosts(): Promise<WPPost[]> {
   const { data } = await api.get('/posts?_embed');
@@ -51,15 +65,15 @@ export async function getPost(slug: string): Promise<WPPost> {
   return data[0];
 }
 
-export async function getPracticeAreas(): Promise<PracticeArea[]> {
-  const { data } = await api.get('/practice-areas');
-  return data;
-}
+// export async function getPracticeAreas(): Promise<PracticeArea[]> {
+//   const { data } = await api.get('/practice-areas');
+//   return data;
+// }
 
-export async function getPracticeArea(slug: string): Promise<PracticeArea> {
-  const { data } = await api.get(`/practice-areas?slug=${slug}`);
-  return data[0];
-}
+// export async function getPracticeArea(slug: string): Promise<PracticeArea> {
+//   const { data } = await api.get(`/practice-areas?slug=${slug}`);
+//   return data[0];
+// }
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
   const { data } = await api.get('/team');

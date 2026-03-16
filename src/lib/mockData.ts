@@ -4,6 +4,9 @@ export type PracticeArea = {
   title: {
     rendered: string
   }
+  excerpt: {
+    rendered: string
+  }
   content: {
     rendered: string
   }
@@ -14,6 +17,9 @@ export const practiceAreas: PracticeArea[] = [
     id: 1,
     slug: "corporate-commercial-law",
     title: {
+      rendered: "Corporate & Commercial Law",
+    },
+    excerpt: {
       rendered: "Corporate & Commercial Law",
     },
     content: {
@@ -29,6 +35,9 @@ export const practiceAreas: PracticeArea[] = [
     title: {
       rendered: "Litigation & Dispute Resolution",
     },
+    excerpt: {
+      rendered: "Litigation & Dispute Resolution",
+    },
     content: {
       rendered: `
         <p>Our litigation team represents clients in complex commercial disputes before courts and arbitration tribunals.</p>
@@ -40,6 +49,9 @@ export const practiceAreas: PracticeArea[] = [
     id: 3,
     slug: "real-estate-property-law",
     title: {
+      rendered: "Real Estate & Property Law",
+    },
+    excerpt: {
       rendered: "Real Estate & Property Law",
     },
     content: {
