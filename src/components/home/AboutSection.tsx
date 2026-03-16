@@ -20,11 +20,11 @@ const AboutSection = () => {
           <div className="md:w-1/2">
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                alt="Law firm team meeting"
+                src="/images/photorealistic-lawyer-environment.jpg"
+                alt="Law firm office"
                 fill
                 className="object-cover"
-              />
+                />
             </div>
           </div>
         </div>

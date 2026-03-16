@@ -20,11 +20,10 @@ const Hero = () => {
         <div className="md:w-1/2 mt-12 md:mt-0">
           <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-              alt="Law firm office"
-              fill
-              className="object-cover"
-              priority
+                src="/images/photorealistic-lawyer-environment.jpg"
+                alt="Law firm office"
+                fill
+                className="object-cover"
             />
           </div>
         </div>
