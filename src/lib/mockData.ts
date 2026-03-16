@@ -62,3 +62,70 @@ export const practiceAreas: PracticeArea[] = [
     },
   },
 ]
+
+export interface TeamMember {
+  id: number
+  slug: string
+  title: { rendered: string }
+  content: { rendered: string }
+  acf?: {
+    position: string
+    photo?: string
+    email?: string
+    phone?: string
+  }
+}
+
+export const teamMembers: TeamMember[] = [
+  {
+    id: 1,
+    slug: "kembi-gitura",
+    title: { rendered: "Kembi Gitura" },
+    content: {
+      rendered: `
+        <p>Kembi Gitura is the founding partner of the firm with extensive experience in corporate law,
+        governance advisory, and high-value commercial transactions.</p>
+      `,
+    },
+    acf: {
+      position: "Managing Partner",
+      photo: "/images/team/kembi.jpg",
+      email: "kembi@kgadvocates.com",
+      phone: "+254700000000",
+    },
+  },
+  {
+    id: 2,
+    slug: "jane-wanjiku",
+    title: { rendered: "Jane Wanjiku" },
+    content: {
+      rendered: `
+        <p>Jane specializes in litigation and dispute resolution,
+        representing clients in complex commercial and civil matters.</p>
+      `,
+    },
+    acf: {
+      position: "Senior Associate",
+      photo: "/images/team/jane.jpg",
+      email: "jane@kgadvocates.com",
+      phone: "+254711000000",
+    },
+  },
+  {
+    id: 3,
+    slug: "david-otieno",
+    title: { rendered: "David Otieno" },
+    content: {
+      rendered: `
+        <p>David focuses on real estate law and conveyancing,
+        assisting developers and investors with property transactions.</p>
+      `,
+    },
+    acf: {
+      position: "Associate Advocate",
+      photo: "/images/team/david.jpg",
+      email: "david@kgadvocates.com",
+      phone: "+254722000000",
+    },
+  },
+]

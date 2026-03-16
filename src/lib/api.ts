@@ -29,18 +29,18 @@ export interface WPPost {
 //   acf?: any; // If you use Advanced Custom Fields
 // }
 
-export interface TeamMember {
-  id: number;
-  slug: string;
-  title: { rendered: string }; // Typically the name
-  content: { rendered: string }; // Bio
-  acf?: {
-    position: string;
-    photo?: string;
-    email?: string;
-    phone?: string;
-  };
-}
+// export interface TeamMember {
+//   id: number;
+//   slug: string;
+//   title: { rendered: string }; // Typically the name
+//   content: { rendered: string }; // Bio
+//   acf?: {
+//     position: string;
+//     photo?: string;
+//     email?: string;
+//     phone?: string;
+//   };
+// }
 
 
 // GET ALL PRACTICE AREAS
