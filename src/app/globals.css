@@ -1,21 +1,45 @@
 @import "tailwindcss";
 
 :root {
+  /* Primary Brand Colors */
+  --navy: #0b1f3a;
+  --navy-light: #1f3a5f;
+
+  --gray-primary: #4b5563;
+  --gray-light: #9ca3af;
+
+  --accent: #8a881e;
+  --accent-light: #e2cf63;
+
+  /* Base UI */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
 }
 
 @theme inline {
+  --color-primary: var(--navy);
+  --color-primary-light: var(--navy-light);
+
+  --color-secondary: var(--gray-primary);
+  --color-secondary-light: var(--gray-light);
+
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0b1120;
+    --foreground: #e5e7eb;
+
+    --navy: #1e3a8a;
+    --gray-primary: #9ca3af;
   }
 }
 
