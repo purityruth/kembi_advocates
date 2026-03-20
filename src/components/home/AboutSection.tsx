@@ -51,9 +51,9 @@ const AboutSection = () => {
               <Button
                 href="/about-us"
                 variant="primary"
-                className="px-6 py-3 bg-white text-gray-900 font-bold rounded-md shadow-md hover:bg-gray-100 transition-colors"
+                className="px-8 py-4 bg-[#001f3f] text-white font-bold rounded-full shadow-md hover:shadow-lg transition-shadow"
               >
-                Learn more about us
+                Learn More About Us
               </Button>
             </div>
           </div>

@@ -74,7 +74,7 @@ const TeamSection = async () => {
           <Button
             href="/team"
             variant="primary"
-            className="px-8 py-4 bg-white text-gray-900 font-bold rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
+            className="px-8 py-4 bg-[#001f3f] text-white font-bold rounded-full shadow-md hover:shadow-lg transition-shadow"
           >
             View All Team Members
           </Button>

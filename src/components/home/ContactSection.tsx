@@ -23,35 +23,37 @@ const ContactSection = () => {
             {/* Contact Methods */}
             <div className="space-y-6">
               {/* Location */}
-              <div className="flex items-start space-x-4">
-                <FaMapMarkerAlt className="text-gold text-2xl mt-1" />
+              <div className="flex items-start space-x-4 hover:translate-x-1 transition-transform duration-200">
+                <FaMapMarkerAlt className="text-yellow-500 text-2xl mt-1 drop-shadow-sm" />
                 <div>
-                  <h4 className="font-semibold text-dark-blue text-lg">
+                  <h4 className="font-semibold text-gray-900 text-lg">
                     Visit Us
                   </h4>
-                  <p className="text-gray-600">Nairobi, Kenya</p>
+                  <p className="text-gray-800 font-medium">Nairobi, Kenya</p>
                 </div>
               </div>
 
               {/* Phone */}
-              <div className="flex items-start space-x-4">
-                <FaPhone className="text-gold text-2xl mt-1" />
+              <div className="flex items-start space-x-4 hover:translate-x-1 transition-transform duration-200">
+                <FaPhone className="text-yellow-500 text-2xl mt-1 drop-shadow-sm" />
                 <div>
-                  <h4 className="font-semibold text-dark-blue text-lg">
+                  <h4 className="font-semibold text-gray-900 text-lg">
                     Call Us
                   </h4>
-                  <p className="text-gray-600">+254 700 000 000</p>
+                  <p className="text-gray-800 font-medium">+254 700 000 000</p>
                 </div>
               </div>
 
               {/* Email */}
-              <div className="flex items-start space-x-4">
-                <FaEnvelope className="text-gold text-2xl mt-1" />
+              <div className="flex items-start space-x-4 hover:translate-x-1 transition-transform duration-200">
+                <FaEnvelope className="text-yellow-500 text-2xl mt-1 drop-shadow-sm" />
                 <div>
-                  <h4 className="font-semibold text-dark-blue text-lg">
+                  <h4 className="font-semibold text-gray-900 text-lg">
                     Email Us
                   </h4>
-                  <p className="text-gray-600">info@kembigituralaw.com</p>
+                  <p className="text-gray-800 font-medium">
+                    info@kembigituralaw.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -60,7 +62,7 @@ const ContactSection = () => {
             <Button
               href="/contact"
               variant="primary"
-              className="px-8 py-4 bg-white text-gray-900 font-bold rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
+              className="px-8 py-4 bg-[#001f3f] text-white font-bold rounded-full shadow-md hover:shadow-lg transition-shadow"
             >
               Send a Message
             </Button>
