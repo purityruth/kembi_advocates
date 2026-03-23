@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary/100 bg-gradient-to-r from-primary/900 to-accent/40 text-white py-12">
+    <footer className="bg-primary/90 bg-gradient-to-r from-primary/900 to-accent/40 text-white py-12">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo Section */}
         <div>
