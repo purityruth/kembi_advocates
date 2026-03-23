@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import { practiceAreas, PracticeArea, TeamMember, teamMembers } from "./mockData"
+import { MockPost, mockPosts } from './mockPosts';
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_WP_API_URL,
@@ -64,15 +65,15 @@ export async function getTeamMember(slug: string): Promise<TeamMember | null> {
 }
 
 // Fetch functions
-export async function getPosts(): Promise<WPPost[]> {
-  const { data } = await api.get('/posts?_embed');
-  return data;
-}
+// export async function getPosts(): Promise<WPPost[]> {
+//   const { data } = await api.get('/posts?_embed');
+//   return data;
+// }
 
-export async function getPost(slug: string): Promise<WPPost> {
-  const { data } = await api.get(`/posts?slug=${slug}&_embed`);
-  return data[0];
-}
+// export async function getPost(slug: string): Promise<WPPost> {
+//   const { data } = await api.get(`/posts?slug=${slug}&_embed`);
+//   return data[0];
+// }
 
 // export async function getPracticeAreas(): Promise<PracticeArea[]> {
 //   const { data } = await api.get('/practice-areas');
@@ -93,6 +94,18 @@ export async function getPost(slug: string): Promise<WPPost> {
 //   const { data } = await api.get(`/team?slug=${slug}`);
 //   return data[0];
 // }
+
+export async function getPosts(): Promise<MockPost[]> {
+  // Simulate network delay (optional)
+  await new Promise((resolve) => setTimeout(resolve, 200));
+  return mockPosts;
+}
+
+export async function getPost(slug: string): Promise<MockPost | null> {
+  const post = mockPosts.find((p) => p.slug === slug);
+  return post || null;
+}
+
 
 export async function getPage(slug: string): Promise<WPPost> {
   const { data } = await api.get(`/pages?slug=${slug}`);
