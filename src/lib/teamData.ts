@@ -102,14 +102,14 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "3",
-    slug: "michael-ochieng",
-    fullName: "Michael Ochieng",
+    slug: "maureen-wanjiku",
+    fullName: "Maureen Wanjiku",
     title: "Partner",
     position: "Partner",
     description: "Partner specializing in real estate and property law.",
-    bio: "Michael Ochieng leads the firm's real estate and property law practice, bringing over 18 years of experience in complex property transactions, land disputes, and real estate development. He has advised on some of Kenya's largest real estate developments, providing strategic guidance on acquisitions, financing, regulatory compliance, and dispute resolution. Michael's pragmatic approach and deep understanding of the real estate sector have made him a trusted advisor to developers, investors, and financial institutions.",
-    image: "/images/team/michael-ochieng.jpg",
-    email: "michael.ochieng@kembigituralaw.com",
+    bio: "Maureen Wanjiku leads the firm's real estate and property law practice, bringing over 18 years of experience in complex property transactions, land disputes, and real estate development. She has advised on some of Kenya's largest real estate developments, providing strategic guidance on acquisitions, financing, regulatory compliance, and dispute resolution. Maureen's pragmatic approach and deep understanding of the real estate sector have made her a trusted advisor to developers, investors, and financial institutions.",
+    image: "/images/team/maureen-wanjiku.jpg",
+    email: "maureen.wanjiku@kembigituralaw.com",
     phone: "+254 700 000 003",
     education: [
       "University of London, LL.M in Property Law",
@@ -135,8 +135,8 @@ export const teamMembers: TeamMember[] = [
     ],
     languages: ["English", "Swahili", "Luo"],
     socialLinks: {
-      linkedin: "https://linkedin.com/in/michael-ochieng",
-      email: "michael.ochieng@kembigituralaw.com",
+      linkedin: "https://linkedin.com/in/maureen-wanjiku",
+      email: "maureen.wanjiku@kembigituralaw.com",
     },
   },
   {
