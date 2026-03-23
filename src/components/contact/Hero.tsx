@@ -74,7 +74,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          <Button href="#contact-form" className="bg-gold text-black px-8 py-3">
+          <Button
+            href="#contact-form"
+            className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+          >
             Start a Conversation
           </Button>
         </motion.div>

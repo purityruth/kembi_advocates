@@ -48,7 +48,7 @@ export default function ContactForm() {
               <strong>📞 Phone:</strong> +254 700 000000
             </p>
             <p>
-              <strong>✉️ Email:</strong> info@lawfirm.com
+              <strong>✉️ Email:</strong> info@kembigituralaw.com
             </p>
           </div>
         </div>
@@ -103,7 +103,20 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full bg-gold text-black font-semibold py-3 rounded hover:scale-105 transition"
+            className="
+    w-full
+    bg-gold
+    text-black
+    font-semibold
+    py-3
+    rounded-lg
+    shadow-md
+    hover:shadow-xl
+    transform
+    hover:scale-105
+    transition
+    duration-300
+  "
           >
             Send Message
           </button>
