@@ -29,7 +29,7 @@ const HeroInner = ({
   const overlayStyles = {
     light: "from-[#0a456e]/80 via-[#0a456e]/70 to-[#0a456e]/50",
     medium: "from-[#0a456e]/90 via-[#0a456e]/80 to-[#0a456e]/60",
-    dark: "from-[#092b42]/95 via-[#092b42]/90 to-[#092b42]/70",
+    dark: "from-[#051a29]/65 via-[#051a29]/70 to-[#051a29]/60",
   };
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { span } from "framer-motion/client";
 import Link from "next/link";
 
 interface ContactCTAProps {
@@ -28,7 +29,7 @@ const ContactCTA = ({
   const overlayStyles = {
     light: "from-[#0a456e]/70 via-[#0a456e]/60 to-[#0a456e]/50",
     medium: "from-[#0a456e]/85 via-[#0a456e]/75 to-[#0a456e]/65",
-    dark: "from-[#0a456e]/95 via-[#0a456e]/90 to-[#0a456e]/85",
+    dark: "from-[#051a29]/45 via-[#051a29]/70 to-[#051a29]/55",
   };
 
   // Text alignment classes
@@ -46,7 +47,7 @@ const ContactCTA = ({
   };
 
   return (
-    <section className={`relative py-20 lg:py-28 overflow-hidden ${className}`}>
+    <section className={`relative py-8 lg:py-8 overflow-hidden ${className}`}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -75,7 +76,7 @@ const ContactCTA = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-[1.2] mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white leading-[1.2] mb-4"
           >
             {title}
           </motion.h2>
@@ -101,7 +102,7 @@ const ContactCTA = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg text-gray-200 max-w-2xl leading-relaxed mb-8"
+            className="text-base sm:text-base text-gray-200 max-w-2xl leading-relaxed mb-8"
           >
             {subtitle}
           </motion.p>
@@ -116,7 +117,7 @@ const ContactCTA = ({
           >
             <Link
               href={buttonLink}
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#d9d9d9] text-[#0a456e] font-semibold text-base tracking-wide hover:bg-white transition-all duration-300 border border-[#d9d9d9]"
+              className="group inline-flex items-center gap-3 px-8 py-2 bg-[#d9d9d9] text-[#0a456e] font-semibold text-base tracking-wide hover:bg-white transition-all duration-300 border border-[#d9d9d9]"
             >
               <span>{buttonText}</span>
               <svg

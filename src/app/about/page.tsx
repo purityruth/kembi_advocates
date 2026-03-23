@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import AboutTeamPreview from "@/components/about/AboutTeamPreview";
 import AboutSection from "@/components/home/AboutSection";
 import AboutPhilosophy from "@/components/about/AboutPhilosophy";
+import ContactCTA from "@/components/ui/ContactCTA";
 
 const AboutPage = () => {
 
@@ -94,44 +95,7 @@ const AboutPage = () => {
         <AboutTeamPreview />
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#0a456e]">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-              Ready to Work With Us?
-            </h2>
-            <div className="w-20 h-[2px] bg-[#d9d9d9] mx-auto mb-6" />
-            <p className="text-gray-200 max-w-2xl mx-auto mb-8">
-              Let our experienced team provide the legal guidance you need.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#d9d9d9] text-[#0a456e] font-semibold text-base tracking-wide hover:bg-white transition-all duration-300 border border-[#d9d9d9]"
-            >
-              Schedule a Consultation
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <ContactCTA />
     </main>
   );
 };
