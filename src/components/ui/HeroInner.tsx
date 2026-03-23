@@ -30,7 +30,7 @@ const HeroInner = ({
   // Overlay opacity mapping
   const overlayStyles = {
     light: "from-[#0a456e]/60 via-[#0a456e]/40 to-[#d9d9d9]/20",
-    medium: "from-[#0a456e]/80 via-[#0a456e]/60 to-[#d9d9d9]/30",
+    medium: "from-[#0a456e]/50 via-[#0a456e]/50 to-[#d9d9d9]/10",
     dark: "from-[#0a456e]/90 via-[#0a456e]/80 to-[#d9d9d9]/40",
   };
 
@@ -43,7 +43,7 @@ const HeroInner = ({
 
   return (
     <section
-      className={`relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden ${className}`}
+      className={`relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden ${className}`}
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -102,7 +102,7 @@ const HeroInner = ({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold leading-[1.2] text-white mb-6"
+            className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-serif font-bold leading-[1.2] text-white mb-6"
           >
             {title}
           </motion.h1>
@@ -127,7 +127,7 @@ const HeroInner = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg sm:text-xl text-gray-200 max-w-2xl leading-relaxed"
+              className="text-base sm:text-lg text-gray-200 max-w-2xl leading-relaxed"
             >
               {subtitle}
             </motion.p>
