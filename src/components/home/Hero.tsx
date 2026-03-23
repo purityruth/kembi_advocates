@@ -54,11 +54,6 @@ const Hero = () => {
           >
             <span className="text-white">Legal Advisory & Professional Services</span>
             <br />
-            {/* <span className="bg-gradient-to-r from-gold via-yellow-400 to-gold bg-clip-text text-transparent">
-              & Company
-            </span>
-            <br />
-            <span className="text-white/90">Advocates</span> */}
           </motion.h1>
 
           {/* Decorative Line */}
@@ -91,7 +86,8 @@ const Hero = () => {
           {/* Primary Button */}
           <Button
             href="/contact"
-            className="group px-6 py-3 bg-white text-black font-semibold text-base shadow-md hover:bg-gray-100 transition-all duration-300"
+            variant="secondary"
+            className="group px-6 py-3 bg-white rounded-none text-black font-semibold text-base shadow-md hover:bg-gray-100 transition-all duration-300"
           >
             <span className="flex items-center gap-2">
               Schedule a Consultation
@@ -114,6 +110,7 @@ const Hero = () => {
           {/* Secondary Button */}
           <Button
             href="/practice-areas"
+            variant="outline"
             className="px-6 py-3 border border-white text-white font-semibold text-base hover:bg-white hover:text-black transition-all duration-300"
           >
             Explore Practice Areas
