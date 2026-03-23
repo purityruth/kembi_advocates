@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5 pointer-events-none" />
 
       <div className="w-full max-w-[1400px] mx-auto px-6 relative z-10">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           {/* Premium Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-200 max-w-xl mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-gray-200 max-w-3xl mb-8 leading-relaxed"
           >
             Kembi-Gitura & Co. Advocates is a leading law firm offering a full spectrum of legal services. 
             We have advised corporates, financial institutions, public sector entities, and 
@@ -82,42 +82,43 @@ const Hero = () => {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4"
+        >
+          {/* Primary Button */}
+          <Button
+            href="/contact"
+            className="group px-6 py-3 bg-white text-black font-semibold text-base shadow-md hover:bg-gray-100 transition-all duration-300"
           >
-            <Button
-              href="/contact"
-              className="group relative px-8 py-4 bg-gradient-to-r from-gold to-yellow-400 text-black font-bold text-lg rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Schedule a Consultation
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-gold opacity-0 group-hover:opacity-100 transition-opacity" />
-            </Button>
+            <span className="flex items-center gap-2">
+              Schedule a Consultation
+              <svg
+                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </span>
+          </Button>
 
-            <Button
-              href="/practice-areas"
-              className="px-8 py-4 border-2 border-gold text-gold font-bold text-lg rounded-lg hover:bg-gold hover:text-black transition-all duration-300 backdrop-blur-sm"
-            >
-              Explore Practice Areas
-            </Button>
-          </motion.div>
+          {/* Secondary Button */}
+          <Button
+            href="/practice-areas"
+            className="px-6 py-3 border border-white text-white font-semibold text-base hover:bg-white hover:text-black transition-all duration-300"
+          >
+            Explore Practice Areas
+          </Button>
+        </motion.div>
 
         </div>
       </div>
