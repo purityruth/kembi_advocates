@@ -25,7 +25,7 @@ const teamPreview = [
 ];
 
 const AboutTeamPreview = () => (
-  <section className="py-24 bg-white">
+  <section className="py-8 bg-white">
     <div className="container mx-auto px-6">
       <SectionHeading subtitle="Meet our experienced advocates">
         Our Team

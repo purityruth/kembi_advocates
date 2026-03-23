@@ -18,16 +18,16 @@ const Button = ({
 }: ButtonProps) => {
   // Base classes: smooth transitions, focus styles, slightly larger padding
   const baseClasses =
-    "inline-block px-8 py-3 rounded-full font-semibold text-lg transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-md";
+    "inline-block px-8 py-3 rounded-full font-semibold text-base transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-md";
 
   // Variants with gradients, hover scale, and aggressive look
   const variants = {
     primary:
-      "bg-gradient-to-r from-gold to-yellow-500 text-dark-blue hover:scale-105 hover:shadow-2xl focus:ring-gold",
+      "bg-gradient-to-r from-primary to-secondary-50 rounded-none text-primary hover:scale-105 hover:shadow-2xl focus:ring-gold",
     secondary:
-      "bg-dark-blue text-white hover:bg-dark-blue/90 hover:scale-105 hover:shadow-xl focus:ring-dark-blue",
+      "bg-secondary text-primary hover:bg-primary/90 hover:text-white rounded-none hover:scale-105 hover:shadow-xl focus:ring-primary",
     outline:
-      "border-2 border-gold text-gold hover:bg-gold hover:text-dark-blue hover:scale-105 focus:ring-gold",
+      "border-1 border-white text-white rounded-none hover:bg-white hover:text-primary hover:scale-105 focus:ring-gold",
   };
 
   const classes = `${baseClasses} ${variants[variant]} ${className}`;

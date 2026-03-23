@@ -2,14 +2,14 @@
 
 :root {
   /* Primary Brand Colors */
-  --navy: #0b1f3a;
-  --navy-light: #1f3a5f;
+  --navy: #0a456e;
+  --navy-light: #1c547c;
 
-  --gray-primary: #4b5563;
-  --gray-light: #9ca3af;
+  --gray-primary: #d9d9d9;
+  --gray-light: #f8f5f5;
 
-  --accent: #8a881e;
-  --accent-light: #e2cf63;
+  --accent: #000000;
+  --accent-light: #5e5e5e;
 
   /* Base UI */
   --background: #ffffff;
@@ -38,7 +38,7 @@
     --background: #0b1120;
     --foreground: #e5e7eb;
 
-    --navy: #1e3a8a;
+    --navy: #0a456e;
     --gray-primary: #9ca3af;
   }
 }

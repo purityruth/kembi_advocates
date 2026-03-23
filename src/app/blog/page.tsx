@@ -16,8 +16,14 @@ export default async function BlogPage() {
                 {post.title.rendered}
               </h2>
             </Link>
-            <div className="mt-2 text-gray-600" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-            <Link href={`/blog/${post.slug}`} className="inline-block mt-4 text-gold font-medium hover:underline">
+            <div
+              className="mt-2 text-gray-600"
+              dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+            />
+            <Link
+              href={`/blog/${post.slug}`}
+              className="inline-block mt-4 text-gold font-medium hover:underline"
+            >
               Read More →
             </Link>
           </article>
