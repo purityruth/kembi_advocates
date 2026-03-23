@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
@@ -38,13 +39,18 @@ const Navbar = () => {
     };
   }, [mobileMenuOpen]);
 
-  // Conditional colors
+  // Conditions
   const isHomeTop = isHome && !isScrolled;
-  const logoColor = isHomeTop ? "text-white" : "text-[#001f3f]"; // dark blue
-  const linkColor = isHomeTop ? "text-white" : "text-[#001f3f]";
+
+  const linkColor = isHomeTop ? "text-white" : "text-gray-700";
+
   const navbarBg = isHomeTop
     ? "bg-transparent"
-    : "bg-white/95 backdrop-blur-md shadow-md";
+    : "bg-white/95 backdrop-blur-md shadow-lg";
+
+  const logoSrc = isHomeTop
+    ? "/images/WhiteLogoKembi-Gitura.png"
+    : "/images/OriginalLogoKembi-Gitura.png";
 
   const isActive = (href: string) =>
     href === "/" ? pathname === href : pathname.startsWith(href);
@@ -55,29 +61,44 @@ const Navbar = () => {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navbarBg}`}
       >
-        <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <Link
-            href="/"
-            className={`flex items-center text-2xl font-serif font-bold transition-colors ${logoColor}`}
-          >
-            <span>Kembi Gitura</span>
-            <span className="text-green-700 ml-1">& Co.</span>
+        <nav className="container mx-auto px-6 py-1 flex items-center justify-between">
+          {/* Logo - Fixed size that doesn't change on scroll */}
+          <Link href="/" className="flex items-center shrink-0">
+            <div className="relative w-[160px] h-[70px] md:w-[180px] md:h-[90px] transition-none">
+              <Image
+                src={logoSrc}
+                alt="Kembi Gitura Logo"
+                fill
+                priority
+                className="object-contain"
+                sizes="(max-width: 768px) 180px, 280px"
+              />
+            </div>
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-8">
+          <ul className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`relative font-medium transition-colors duration-300 group ${linkColor} hover:text-green-500`}
+                  className={`relative px-4 py-2 text-base font-medium transition-all duration-300 group ${
+                    isActive(item.href) 
+                      ? (isHomeTop ? "text-white font-semibold" : "text-primary font-semibold") 
+                      : `${linkColor} hover:text-primary hover:bg-gray-50 rounded-sm-lg group-hover:shadow-md`
+                  }`}
                 >
-                  {item.label}
-                  {/* Green underline effect */}
+                  {/* Simple scale effect on text only - no background */}
+                  <span className="relative inline-block group-hover:scale-105 transition-transform duration-300">
+                    {item.label}
+                  </span>
+
+                  {/* Clean underline animation */}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-green-700 transition-all duration-300 ${
-                      isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                    className={`absolute -bottom-1 left-1/2 h-0.5 bg-primary transition-all duration-300 ${
+                      isActive(item.href) 
+                        ? "w-6 -translate-x-1/2" 
+                        : "w-0 group-hover:w-6 group-hover:-translate-x-1/2"
                     }`}
                   />
                 </Link>
@@ -88,7 +109,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`md:hidden text-2xl focus:outline-none transition-colors duration-300 z-50 ${linkColor}`}
+            className={`md:hidden text-2xl focus:outline-none transition-all duration-300 z-50 p-2 rounded-lg hover:bg-white/10 active:scale-95 ${linkColor}`}
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -98,30 +119,50 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 transition-transform duration-500 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-40 transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] md:hidden ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ top: 0, backgroundColor: "#ffffff" }}
+        style={{ backgroundColor: "#ffffff" }}
       >
-        <div className="container mx-auto px-6 pt-24 pb-8 h-full overflow-y-auto">
-          <ul className="flex flex-col space-y-6">
-            {navItems.map((item) => (
-              <li key={item.href}>
+        <div className="container mx-auto px-6 pt-28 pb-8 h-full overflow-y-auto">
+          <ul className="flex flex-col space-y-4">
+            {navItems.map((item, index) => (
+              <li 
+                key={item.href}
+                className="transform transition-all duration-500 delay-[calc(50ms*var(--index))]"
+                style={{ 
+                  '--index': index,
+                  transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(-50px)',
+                  opacity: mobileMenuOpen ? 1 : 0
+                } as React.CSSProperties}
+              >
                 <Link
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`relative inline-block text-2xl font-medium py-2 transition-colors group ${
+                  className={`relative block text-2xl font-medium py-3 px-4 rounded-xl transition-all duration-300 group overflow-hidden ${
                     isActive(item.href)
-                      ? "text-green-700"
-                      : linkColor + " hover:text-green-700"
+                      ? "text-primary bg-primary/5"
+                      : "text-gray-700 hover:text-primary hover:bg-gray-50"
                   }`}
                 >
-                  {item.label}
-                  {/* Mobile active indicator */}
-                  {isActive(item.href) && (
-                    <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-green-700 rounded-full" />
-                  )}
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                  {/* Hover background animation */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                  
+                  {/* Content */}
+                  <span className="relative inline-flex items-center gap-3">
+                    {/* Active indicator */}
+                    {isActive(item.href) && (
+                      <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                    )}
+                    
+                    {/* Text with slide effect */}
+                    <span className="inline-block group-hover:translate-x-2 transition-transform duration-300">
+                      {item.label}
+                    </span>
+                  </span>
+
+                  {/* Ripple effect on click */}
+                  <span className="absolute inset-0 rounded-xl bg-primary/0 group-active:bg-primary/10 transition-colors duration-150" />
                 </Link>
               </li>
             ))}
@@ -129,10 +170,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Backdrop for mobile */}
+      {/* Backdrop */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden animate-in fade-in duration-300"
           onClick={() => setMobileMenuOpen(false)}
         />
       )}
