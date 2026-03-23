@@ -27,7 +27,7 @@ const AboutPage = () => {
         subtitle="With a legacy of excellence spanning over two decades, Kembi Gitura & Company Advocates stands as a pillar of legal expertise and integrity in Kenya."
         breadcrumbs={[{ label: "About", href: "/about" }]}
         backgroundImage="/images/photorealistic-lawyer-environment.jpg"
-        overlayOpacity="medium"
+        overlayOpacity="dark"
       />
 
       {/* Introduction Section */}
