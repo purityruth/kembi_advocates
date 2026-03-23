@@ -75,7 +75,9 @@ const AboutSection = () => {
             {/* Experience Badge - Floating Element */}
             <div className="absolute -bottom-6 -right-6 bg-[#0a456e] p-5 border border-[#d9d9d9]/20">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#d9d9d9]">25+</div>
+                <div className="text-3xl font-bold text-gray-100">
+                  {new Date().getFullYear() - 1991}+
+                </div>
                 <div className="text-xs text-white/70 uppercase tracking-wider">Years of Trust</div>
               </div>
             </div>
@@ -90,7 +92,7 @@ const AboutSection = () => {
             className="space-y-8"
           >
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-[1.2] text-[#0a456e]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold leading-[1.2] text-[#0a456e]">
               Strategic Legal Solutions
               <span className="block text-gray-900 mt-2">Built on Trust & Excellence</span>
             </h2>
@@ -100,49 +102,19 @@ const AboutSection = () => {
 
             {/* Description */}
             <div className="space-y-5">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Kembi Gitura & Company Advocates stands as a premier law firm in Nairobi, Kenya, 
+              <p className="text-lg text-justify text-gray-700 leading-relaxed">
+                Kembi-Gitura & Company Advocates stands as a premier law firm in Nairobi, Kenya, 
                 delivering exceptional legal services with unwavering commitment to excellence, 
                 integrity, and client success.
               </p>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-justify leading-relaxed">
                 Our distinguished team combines decades of specialized expertise with a 
                 results-driven approach, navigating complex legal challenges across corporate, 
                 commercial, and civil litigation practices. We are dedicated to providing 
                 strategic counsel that protects our clients' interests and advances their 
                 long-term objectives.
               </p>
-            </div>
-
-            {/* Guiding Principles */}
-            <div className="pt-4">
-              <h3 className="text-sm font-semibold text-[#0a456e] uppercase tracking-wider mb-4">
-                Our Guiding Principles
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {principles.map((principle, index) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-gray-50 border border-[#d9d9d9]/50 text-gray-700 text-sm font-medium"
-                  >
-                    {principle}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Key Statistics */}
-            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#d9d9d9]/30">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <span className="text-2xl text-[#0a456e]/60">{stat.icon}</span>
-                  <div>
-                    <div className="text-2xl font-bold text-[#0a456e]">{stat.value}</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</div>
-                  </div>
-                </div>
-              ))}
             </div>
 
             {/* CTA Button */}
@@ -170,27 +142,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Optional: Trust Indicators Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 pt-12 border-t border-[#d9d9d9]/30 hidden md:block"
-        >
-          <div className="flex flex-wrap justify-between items-center gap-8">
-            <div className="text-sm text-gray-500 uppercase tracking-wider">
-              Trusted by industry leaders
-            </div>
-            <div className="flex flex-wrap gap-12 opacity-60">
-              {["Corporate", "Commercial", "Litigation", "Real Estate", "Employment"].map((area, index) => (
-                <span key={index} className="text-sm text-gray-600 font-medium">
-                  {area}
-                </span>
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
