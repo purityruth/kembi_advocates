@@ -68,11 +68,14 @@ export const practiceAreas: PracticeArea[] = [
       rendered: "Real Estate, Banking & Finance",
     },
     excerpt: {
-      rendered: "Strategic advisory across real estate transactions and banking engagements.",
+      rendered:
+        "Strategic legal advisory across complex real estate transactions and banking engagements.",
     },
     content: {
       rendered: `
-        <p>The Firm provides strategic legal advisory across complex real estate transactions and banking engagements.</p>
+        <p>The Firm provides strategic legal advisory across complex real estate transactions and banking engagements. We act for financial institutions, developers, investors, and corporate borrowers in structuring, securing, and executing high value property and finance transactions with precision and regulatory compliance.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
           <li>Commercial and residential conveyancing</li>
           <li>Real estate development advisory</li>
@@ -80,6 +83,8 @@ export const practiceAreas: PracticeArea[] = [
           <li>Lease structuring and negotiation</li>
           <li>Project finance and security documentation</li>
           <li>Loan structuring and syndicated lending</li>
+          <li>Perfection of securities and collateral management</li>
+          <li>Debt recovery and enforcement of securities</li>
         </ul>
       `,
     },
@@ -91,17 +96,23 @@ export const practiceAreas: PracticeArea[] = [
       rendered: "Commercial & Corporate Law",
     },
     excerpt: {
-      rendered: "Advisory on structuring, governance, and complex transactions.",
+      rendered:
+        "Advisory on structuring, governance, and complex commercial transactions.",
     },
     content: {
       rendered: `
-        <p>We advise corporates and investors on structuring and governance.</p>
+        <p>We advise corporates, investors, and institutions on structuring, governance, and complex commercial transactions. Our approach integrates legal rigor with commercial insight to support sustainable growth and regulatory compliance.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
           <li>Mergers and acquisitions</li>
-          <li>Joint ventures and partnerships</li>
-          <li>Corporate restructuring</li>
-          <li>Regulatory compliance</li>
+          <li>Joint ventures and strategic partnerships</li>
+          <li>Corporate restructuring and reorganisation</li>
+          <li>Company secretarial and governance advisory</li>
+          <li>Regulatory compliance and risk management</li>
+          <li>Shareholder agreements and capital structuring</li>
           <li>Contract drafting and negotiation</li>
+          <li>Advisory for NGOs, trusts, and companies limited by guarantee</li>
         </ul>
       `,
     },
@@ -113,16 +124,19 @@ export const practiceAreas: PracticeArea[] = [
       rendered: "Dispute Resolution",
     },
     excerpt: {
-      rendered: "Strategic legal representation in civil and commercial disputes.",
+      rendered:
+        "Strategic and effective legal representation in civil and commercial disputes.",
     },
     content: {
       rendered: `
-        <p>We provide effective legal representation in disputes across Kenya.</p>
+        <p>We provide strategic and effective legal representation in civil and commercial disputes across Kenya. We understand that disputes can be stressful, time-consuming, and financially draining. Our litigation team is committed to protecting your rights, resolving conflicts efficiently, and pursuing the best possible outcome for you.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
-          <li>Commercial disputes</li>
+          <li>Commercial and contractual disputes</li>
           <li>Land and property disputes</li>
-          <li>Debt recovery</li>
-          <li>Judicial review matters</li>
+          <li>Debt recovery and enforcement proceedings</li>
+          <li>Judicial review and constitutional matters</li>
         </ul>
       `,
     },
@@ -134,16 +148,22 @@ export const practiceAreas: PracticeArea[] = [
       rendered: "Private Wealth",
     },
     excerpt: {
-      rendered: "Advisory for high net worth individuals and families.",
+      rendered:
+        "Discreet and strategic advisory for high net worth individuals and families.",
     },
     content: {
       rendered: `
-        <p>We provide advisory on wealth preservation and succession planning.</p>
+        <p>The Firm provides discreet and strategic advisory services to high net worth individuals and families on wealth preservation, succession planning, and asset structuring across generations.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
-          <li>Estate planning</li>
-          <li>Trust formation</li>
-          <li>Wills and succession</li>
-          <li>Asset protection</li>
+          <li>Estate planning and wealth structuring</li>
+          <li>Trust formation and administration</li>
+          <li>Wills and succession planning</li>
+          <li>Probate and estate administration</li>
+          <li>Asset protection strategies</li>
+          <li>Family business succession planning</li>
+          <li>Cross border estate advisory</li>
         </ul>
       `,
     },
@@ -152,19 +172,24 @@ export const practiceAreas: PracticeArea[] = [
     id: 5,
     slug: "employment-labour-law",
     title: {
-      rendered: "Employment & Labour Law",
+      rendered: "Employment and Labour Law",
     },
     excerpt: {
-      rendered: "Advisory on employment frameworks and compliance.",
+      rendered:
+        "Advisory on employment frameworks, compliance, and workplace governance.",
     },
     content: {
       rendered: `
-        <p>We advise employers and institutions on employment law.</p>
+        <p>We advise employers, executives, and institutions on employment frameworks, compliance, and dispute resolution. Our practice is focused on risk mitigation, regulatory alignment, and effective workplace governance.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
-          <li>Employment contracts</li>
-          <li>HR policies</li>
-          <li>Workplace investigations</li>
-          <li>Dispute resolution</li>
+          <li>Employment contracts and executive agreements</li>
+          <li>HR policies and workplace compliance audits</li>
+          <li>Redundancy and restructuring advisory</li>
+          <li>Disciplinary and workplace investigations</li>
+          <li>Employment dispute resolution</li>
+          <li>Advisory on employee benefits and termination procedures</li>
         </ul>
       `,
     },
@@ -176,15 +201,20 @@ export const practiceAreas: PracticeArea[] = [
       rendered: "Immigration Law",
     },
     excerpt: {
-      rendered: "Advisory on immigration compliance and mobility.",
+      rendered:
+        "Advisory on immigration compliance, mobility strategy, and regulatory approvals.",
     },
     content: {
       rendered: `
-        <p>We assist corporations and individuals with immigration processes.</p>
+        <p>The Firm advises corporations and individuals on immigration compliance, mobility strategy, and regulatory approvals, ensuring seamless engagement with Kenyan immigration authorities.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
-          <li>Work permits</li>
-          <li>Residency applications</li>
-          <li>Compliance audits</li>
+          <li>Work permits and special passes</li>
+          <li>Residency and citizenship applications</li>
+          <li>Investor and expatriate advisory</li>
+          <li>Compliance audits for corporate entities</li>
+          <li>Immigration appeals and reviews</li>
         </ul>
       `,
     },
@@ -196,15 +226,19 @@ export const practiceAreas: PracticeArea[] = [
       rendered: "Family Law",
     },
     excerpt: {
-      rendered: "Discreet representation in sensitive family matters.",
+      rendered:
+        "Strategic and discreet representation in family law matters.",
     },
     content: {
       rendered: `
-        <p>We provide representation in complex family disputes.</p>
+        <p>We provide strategic and discreet representation in family law matters, combining technical expertise with sensitivity in high value and complex personal disputes.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
-          <li>Divorce proceedings</li>
-          <li>Matrimonial disputes</li>
-          <li>Guardianship</li>
+          <li>Divorce and separation proceedings</li>
+          <li>Matrimonial property disputes</li>
+          <li>Guardianship applications</li>
+          <li>Pre nuptial and post nuptial agreements</li>
         </ul>
       `,
     },
@@ -216,15 +250,22 @@ export const practiceAreas: PracticeArea[] = [
       rendered: "Tax Advisory",
     },
     excerpt: {
-      rendered: "Structured tax solutions for corporates and individuals.",
+      rendered:
+        "Structured, compliance-focused tax advisory for corporates and private clients.",
     },
     content: {
       rendered: `
-        <p>We provide tax advisory in an evolving regulatory environment.</p>
+        <p>Our tax advisory practice provides corporations and private clients with structured, compliance focused solutions in an evolving regulatory environment. We combine technical tax knowledge with commercial practicality.</p>
+        
+        <p><strong>Key services:</strong></p>
         <ul>
-          <li>Tax planning</li>
-          <li>Compliance</li>
-          <li>Tax dispute resolution</li>
+          <li>Tax structuring and planning</li>
+          <li>Corporate and individual tax compliance</li>
+          <li>Advisory on VAT, income tax, and corporate tax</li>
+          <li>Tax risk assessment and mitigation</li>
+          <li>Representation in engagements with Kenya Revenue Authority</li>
+          <li>Tax dispute resolution and appeals</li>
+          <li>Advisory on tax implications of mergers and acquisitions</li>
         </ul>
       `,
     },
