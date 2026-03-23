@@ -27,7 +27,6 @@ const AboutPage = () => {
         breadcrumbs={[{ label: "About", href: "/about" }]}
         backgroundImage="/images/photorealistic-lawyer-environment.jpg"
         overlayOpacity="medium"
-        textAlign="center"
       />
 
       {/* Introduction Section */}
