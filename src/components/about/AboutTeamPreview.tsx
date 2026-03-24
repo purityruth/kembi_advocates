@@ -1,72 +1,62 @@
-import SectionHeading from "@/components/ui/SectionHeading";
-import Card from "../ui/Card";
-import Button from "../ui/Button";
-import Image from "next/image";
+// components/about/AboutTeamPreview.tsx
+"use client";
 
-const teamPreview = [
-  {
-    name: "John Kembi",
-    position: "Managing Partner",
-    photo: "/team/john.jpg",
-    slug: "john-kembi",
-  },
-  {
-    name: "Jane Gitura",
-    position: "Partner",
-    photo: "/team/jane.jpg",
-    slug: "jane-gitura",
-  },
-  {
-    name: "Michael Otieno",
-    position: "Associate",
-    photo: "/team/michael.jpg",
-    slug: "michael-otieno",
-  },
-];
+import TeamGrid from "@/components/ui/TeamGrid";
+import { teamMembers } from "@/lib/teamData";
+import Link from "next/link";
 
-const AboutTeamPreview = () => (
-  <section className="py-8 bg-white">
-    <div className="container mx-auto px-6">
-      <SectionHeading subtitle="Meet our experienced advocates">
-        Our Team
-      </SectionHeading>
+const AboutTeamPreview = () => {
+  // Get the first 3 partners/leadership team members
+  const featuredMembers = teamMembers
+    .filter((m) => m.position === "Senior Partner" || m.position === "Managing Partner" || m.position === "Partner")
+    .slice(0, 3);
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-        {teamPreview.map((member, i) => (
-          <Card
-            key={i}
-            href={`/team/${member.slug}`}
-            title={member.name}
-            className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+  return (
+    <section className="py-8 bg-white">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0a456e] mb-3">
+            Our Leadership
+          </h2>
+          <div className="w-20 h-[2px] bg-[#d9d9d9] mx-auto mb-4" />
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Meet the distinguished professionals leading our firm with expertise and dedication.
+          </p>
+        </div>
+
+        {/* Team Grid - Compact variant for preview */}
+        <TeamGrid
+          members={featuredMembers}
+          variant="compact"
+          columns={3}
+        />
+
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <Link
+            href="/team"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-[#0a456e] text-white font-semibold hover:bg-[#0a456e]/90 transition-all border border-[#d9d9d9]/30"
           >
-            {member.photo && (
-              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-                <Image
-                  src={member.photo}
-                  alt={member.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-            )}
-            <p className="text-gold font-medium text-sm mb-2 group-hover:underline">
-              {member.position}
-            </p>
-          </Card>
-        ))}
+            <span>View Full Team</span>
+            <svg
+              className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </Link>
+        </div>
       </div>
-
-      <div className="text-center mt-12">
-        <Button
-          href="/team"
-          variant="primary"
-          className="px-8 py-4 bg-[#001f3f] text-white font-bold rounded-full shadow-md hover:shadow-lg transition-shadow"
-        >
-          View All Team Members
-        </Button>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default AboutTeamPreview;
