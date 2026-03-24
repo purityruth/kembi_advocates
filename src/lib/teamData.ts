@@ -26,14 +26,14 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: "1",
-    slug: "john-kembi-gitura",
-    fullName: "John Kembi Gitura",
+    slug: "kembi-gitura",
+    fullName: "Kembi Gitura",
     title: "Founding Partner",
     position: "Founding Partner",
     description: "Founder and Senior Partner with over 30 years of experience in corporate law and dispute resolution.",
-    bio: "John Kembi Gitura founded the firm in 1995 with a vision to create a premier law practice built on integrity, excellence, and client-centered service. With over three decades of legal experience, he has established himself as one of Kenya's leading corporate and commercial lawyers. His strategic counsel has guided numerous multinational corporations, financial institutions, and government entities through complex transactions and disputes. John's leadership and vision continue to shape the firm's commitment to excellence.",
+    bio: "Kembi Gitura founded the firm in 1995 with a vision to create a premier law practice built on integrity, excellence, and client-centered service. With over three decades of legal experience, he has established himself as one of Kenya's leading corporate and commercial lawyers. His strategic counsel has guided numerous multinational corporations, financial institutions, and government entities through complex transactions and disputes. Kembi's leadership and vision continue to shape the firm's commitment to excellence.",
     image: "/images/team/Kembi Gitura.webp",
-    email: "john.kembi@kembigituralaw.com",
+    email: "kembi.gitura@kembigituralaw.com",
     phone: "+254 700 000 001",
     education: [
       "University of Nairobi, LL.B (Hons)",
@@ -58,8 +58,8 @@ export const teamMembers: TeamMember[] = [
     ],
     languages: ["English", "Swahili", "Kikuyu"],
     socialLinks: {
-      linkedin: "https://linkedin.com/in/john-kembi-gitura",
-      email: "john.kembi@kembigituralaw.com",
+      linkedin: "https://linkedin.com/in/kembi-gitura",
+      email: "kembi.gitura@kembigituralaw.com",
     },
   },
   {
