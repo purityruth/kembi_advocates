@@ -39,8 +39,23 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* Team Section */}
+{[...partners, ...seniorAssociates, ...associates].length > 0 && (
+  <section className="py-12 bg-white">
+    <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+      <TeamGrid
+        members={[...partners, ...seniorAssociates, ...associates]}
+        title="Our Team"
+        subtitle="A dedicated team bringing expertise, integrity, and a commitment to excellence."
+        columns={3}
+        variant="default"
+      />
+    </div>
+  </section>
+)}
+
       {/* Partners Section */}
-      {partners.length > 0 && (
+      {/* {partners.length > 0 && (
         <section className="py-12 bg-white">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
             <TeamGrid
@@ -52,10 +67,10 @@ export default function TeamPage() {
             />
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Senior Associates Section */}
-      {seniorAssociates.length > 0 && (
+      {/* {seniorAssociates.length > 0 && (
         <section className="py-12 bg-gray-50">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
             <TeamGrid
@@ -67,10 +82,10 @@ export default function TeamPage() {
             />
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Associates Section */}
-      {associates.length > 0 && (
+      {/* {associates.length > 0 && (
         <section className="py-12 bg-white">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
             <TeamGrid
@@ -82,7 +97,7 @@ export default function TeamPage() {
             />
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Contact CTA */}
       <ContactCTA
