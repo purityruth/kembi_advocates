@@ -8,7 +8,7 @@ import Link from "next/link";
 const AboutTeamPreview = () => {
   // Get the first 3 partners/leadership team members
   const featuredMembers = teamMembers
-    .filter((m) => m.position === "Senior Partner" || m.position === "Managing Partner" || m.position === "Partner")
+    .filter((m) => m.position === "Founding Partner" || m.position === "Managing Partner" || m.position === "Associate")
     .slice(0, 3);
 
   return (

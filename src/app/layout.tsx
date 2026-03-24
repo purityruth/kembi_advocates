@@ -11,7 +11,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Kembi Gitura & Company Advocates",
+  title: "Kembi-Gitura & Company Advocates",
   description: "Premier legal services with integrity and excellence.",
 };
 

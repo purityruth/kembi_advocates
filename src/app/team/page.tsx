@@ -9,7 +9,7 @@ import { teamMembers } from "@/lib/teamData";
 export default function TeamPage() {
   // Group members by rank for the grid
   const partners = teamMembers.filter(
-    (m) => m.position === "Senior Partner" || m.position === "Managing Partner" || m.position === "Partner"
+    (m) => m.position === "Founding Partner" || m.position === "Managing Partner" || m.position === "Partner"
   );
   const seniorAssociates = teamMembers.filter((m) => m.position === "Senior Associate");
   const associates = teamMembers.filter((m) => m.position === "Associate");
