@@ -17,7 +17,7 @@ const AboutTeamPreview = () => {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0a456e] mb-3">
-            Our Leadership
+            Our Team
           </h2>
           <div className="w-20 h-[2px] bg-[#d9d9d9] mx-auto mb-4" />
           <p className="text-gray-600 max-w-2xl mx-auto">

@@ -12,11 +12,11 @@ import ContactCTA from "@/components/ui/ContactCTA";
 const AboutPage = () => {
 
   const milestones = [
-    { year: "1995", event: "Firm Established in Nairobi" },
+    { year: "1991", event: "Firm Established in Nairobi" },
     { year: "2005", event: "Expanded to Corporate Law Practice" },
     { year: "2015", event: "Opened Second Office" },
     { year: "2020", event: "Launched Pro Bono Initiative" },
-    { year: "2024", event: "Celebrating 25+ Years of Excellence" },
+    { year: "2024", event: "Celebrating 35+ Years of Excellence" },
   ];
 
   return (
@@ -59,7 +59,7 @@ const AboutPage = () => {
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="border-l-4 border-[#0a456e] pl-4">
-                  <div className="text-3xl font-bold text-[#0a456e]">25+</div>
+                  <div className="text-3xl font-bold text-[#0a456e]">35+</div>
                   <div className="text-sm text-gray-600">Years of Excellence</div>
                 </div>
                 <div className="border-l-4 border-[#0a456e] pl-4">

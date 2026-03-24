@@ -3,6 +3,7 @@ import AboutSection from '@/components/home/AboutSection';
 import PracticeAreasSection from '@/components/home/PracticeAreasSection';
 import TeamSection from '@/components/home/TeamSection';
 import ContactSection from '@/components/home/ContactSection';
+import ContactCTA from '@/components/ui/ContactCTA';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <PracticeAreasSection />
-      <ContactSection />
+      <ContactCTA />
     </>
   );
 }
