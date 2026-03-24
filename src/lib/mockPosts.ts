@@ -5,6 +5,7 @@ export interface MockPost {
   title: { rendered: string };
   content: { rendered: string };
   excerpt: { rendered: string };
+  featured_image?: string;
   date: string;
 }
 
@@ -15,6 +16,7 @@ export const mockPosts: MockPost[] = [
     title: { rendered: "Top Legal Trends to Watch in 2026" },
     content: { rendered: "<p>Full article content goes here...</p>" },
     excerpt: { rendered: "<p>Discover the key legal trends shaping the industry...</p>" },
+    featured_image: "/images/blog/photorealistic-lawyer-environment.jpg",
     date: "2026-03-23",
   },
   {
@@ -23,6 +25,7 @@ export const mockPosts: MockPost[] = [
     title: { rendered: "Corporate Compliance Tips for SMEs" },
     content: { rendered: "<p>Full article content goes here...</p>" },
     excerpt: { rendered: "<p>Learn practical compliance strategies for small businesses...</p>" },
+    featured_image: "/images/blog/photorealistic-lawyer-environment.jpg",
     date: "2026-02-15",
   },
   {
@@ -31,6 +34,7 @@ export const mockPosts: MockPost[] = [
     title: { rendered: "Contract Drafting Best Practices" },
     content: { rendered: "<p>Full article content goes here...</p>" },
     excerpt: { rendered: "<p>Key tips for drafting clear, enforceable contracts...</p>" },
+    featured_image: "/images/blog/photorealistic-lawyer-environment.jpg",
     date: "2026-01-10",
   },
 ];
