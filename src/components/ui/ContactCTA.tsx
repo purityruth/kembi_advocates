@@ -13,6 +13,7 @@ interface ContactCTAProps {
   overlayOpacity?: "light" | "medium" | "dark";
   textAlign?: "left" | "center" | "right";
   className?: string;
+  showTrustBadges?: boolean;
 }
 
 const ContactCTA = ({
@@ -24,6 +25,7 @@ const ContactCTA = ({
   overlayOpacity = "dark",
   textAlign = "center",
   className = "",
+  showTrustBadges = true,
 }: ContactCTAProps) => {
   // Overlay opacity mapping
   const overlayStyles = {
