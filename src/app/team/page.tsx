@@ -12,7 +12,7 @@ export default function TeamPage() {
     (m) => m.position === "Founding Partner" || m.position === "Managing Partner" || m.position === "Partner"
   );
   const seniorAssociates = teamMembers.filter((m) => m.position === "Senior Associate");
-  const associates = teamMembers.filter((m) => m.position === "Associate");
+  const associates = teamMembers.filter((m) => m.position === "Associate Advocate");
 
   return (
     <main className="bg-white">
