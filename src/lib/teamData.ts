@@ -31,7 +31,7 @@ export const teamMembers: TeamMember[] = [
     title: "Founding Partner",
     position: "Founding Partner",
     description: "Founder and Senior Partner with over 30 years of experience in corporate law and dispute resolution.",
-    bio: "Sen. Kembi-Gitura founded the firm in 1991 with a vision to create a premier law practice built on integrity, excellence, and client-centered service. With over three decades of legal experience, he has established himself as one of Kenya's leading corporate and commercial lawyers. His strategic counsel has guided numerous multinational corporations, financial institutions, and government entities through complex transactions and disputes. Kembi's leadership and vision continue to shape the firm's commitment to excellence.",
+    bio: "Sen. Kembi-Gitura founded the firm in 1991 with a vision to create a premier law practice built on integrity, excellence, and client-centered service. With over three decades of legal experience, he has established himself as one of Kenya's leading corporate and commercial lawyers. His strategic counsel has guided numerous multinational corporations, financial institutions, and government entities through complex transactions and disputes. Sen. Kembi-Gitura's leadership and vision continue to shape the firm's commitment to excellence.",
     image: "/images/team/Kembi Gitura.webp",
     email: "kembigitura@gmail.com",
     phone: "+254 711 719 401",
