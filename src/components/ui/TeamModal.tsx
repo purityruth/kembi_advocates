@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { TeamMember } from "@/lib/teamData";
+import { useState } from "react";
 
 interface TeamModalProps {
   member: TeamMember | null;
@@ -10,7 +11,13 @@ interface TeamModalProps {
 }
 
 const TeamModal = ({ member, onClose }: TeamModalProps) => {
+  const [isBioExpanded, setIsBioExpanded] = useState(false);
+  
   if (!member) return null;
+
+  // Determine if bio is long (e.g., more than 300 characters)
+  const isLongBio = member.bio.length > 300;
+  const displayBio = isBioExpanded ? member.bio : member.bio.slice(0, 300);
 
   return (
     <div
@@ -55,14 +62,25 @@ const TeamModal = ({ member, onClose }: TeamModalProps) => {
               
               <div className="w-12 h-[2px] bg-[#d9d9d9] mb-5" />
 
-              {/* Bio */}
+              {/* Bio with Read More */}
               <div className="mb-5">
                 <h3 className="text-xs font-semibold text-[#0a456e] uppercase tracking-wider mb-2">
                   Biography
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
-                  {member.bio}
-                </p>
+                <div className="text-gray-600 text-sm leading-relaxed">
+                  <p>
+                    {isLongBio ? displayBio : member.bio}
+                    {isLongBio && !isBioExpanded && "..."}
+                  </p>
+                  {isLongBio && (
+                    <button
+                      onClick={() => setIsBioExpanded(!isBioExpanded)}
+                      className="mt-2 text-[#0a456e] hover:text-[#d9d9d9] text-sm font-medium transition-colors"
+                    >
+                      {isBioExpanded ? "Show less" : "Read more"}
+                    </button>
+                  )}
+                </div>
               </div>
 
               {/* Areas of Expertise */}
