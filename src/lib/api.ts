@@ -1,6 +1,6 @@
+// lib/api.ts
 import axios from 'axios';
-
-import { practiceAreas, PracticeArea, TeamMember, teamMembers } from "./mockData"
+import { practiceAreas, PracticeArea, TeamMember, teamMembers } from "./mockData";
 import { MockPost, mockPosts } from './mockPosts';
 
 const api = axios.create({
@@ -21,93 +21,77 @@ export interface WPPost {
   };
 }
 
-// export interface PracticeArea {
-//   id: number;
-//   slug: string;
-//   title: { rendered: string };
-//   excerpt?: { rendered: string };
-//   content: { rendered: string };
-//   acf?: any; // If you use Advanced Custom Fields
-// }
-
-// export interface TeamMember {
-//   id: number;
-//   slug: string;
-//   title: { rendered: string }; // Typically the name
-//   content: { rendered: string }; // Bio
-//   acf?: {
-//     position: string;
-//     photo?: string;
-//     email?: string;
-//     phone?: string;
-//   };
-// }
-
-
-// GET ALL PRACTICE AREAS
+// ============= PRACTICE AREAS =============
 export async function getPracticeAreas(): Promise<PracticeArea[]> {
-  return practiceAreas
+  return practiceAreas;
 }
 
-// GET SINGLE PRACTICE AREA
 export async function getPracticeArea(slug: string): Promise<PracticeArea | null> {
-  const area = practiceAreas.find((a) => a.slug === slug)
-  return area || null
+  const area = practiceAreas.find((a) => a.slug === slug);
+  return area || null;
 }
 
+// ============= TEAM MEMBERS =============
 export async function getTeamMembers(): Promise<TeamMember[]> {
-  return teamMembers
+  return teamMembers;
 }
 
 export async function getTeamMember(slug: string): Promise<TeamMember | null> {
-  const member = teamMembers.find((m) => m.slug === slug)
-  return member || null
+  const member = teamMembers.find((m) => m.slug === slug);
+  return member || null;
 }
 
-// Fetch functions
-// export async function getPosts(): Promise<WPPost[]> {
-//   const { data } = await api.get('/posts?_embed');
-//   return data;
-// }
-
-// export async function getPost(slug: string): Promise<WPPost> {
-//   const { data } = await api.get(`/posts?slug=${slug}&_embed`);
-//   return data[0];
-// }
-
-// export async function getPracticeAreas(): Promise<PracticeArea[]> {
-//   const { data } = await api.get('/practice-areas');
-//   return data;
-// }
-
-// export async function getPracticeArea(slug: string): Promise<PracticeArea> {
-//   const { data } = await api.get(`/practice-areas?slug=${slug}`);
-//   return data[0];
-// }
-
-// export async function getTeamMembers(): Promise<TeamMember[]> {
-//   const { data } = await api.get('/team');
-//   return data;
-// }
-
-// export async function getTeamMember(slug: string): Promise<TeamMember> {
-//   const { data } = await api.get(`/team?slug=${slug}`);
-//   return data[0];
-// }
-
+// ============= BLOG POSTS =============
+// Get all posts
 export async function getPosts(): Promise<MockPost[]> {
   // Simulate network delay (optional)
   await new Promise((resolve) => setTimeout(resolve, 200));
   return mockPosts;
 }
 
-export async function getPost(slug: string): Promise<MockPost | null> {
-  const post = mockPosts.find((p) => p.slug === slug);
+// Get a single post by slug (main function)
+export async function getPostBySlug(slug: string): Promise<MockPost | null> {
+  const posts = await getPosts();
+  const post = posts.find((p) => p.slug === slug);
   return post || null;
 }
 
+// Get all slugs for static generation
+export async function getAllSlugs(): Promise<string[]> {
+  const posts = await getPosts();
+  return posts.map((post) => post.slug);
+}
 
+// Get related posts (exclude current post)
+export async function getRelatedPosts(slug: string, limit: number = 3): Promise<MockPost[]> {
+  const posts = await getPosts();
+  return posts
+    .filter((p) => p.slug !== slug)
+    .slice(0, limit);
+}
+
+// ============= PAGES =============
 export async function getPage(slug: string): Promise<WPPost> {
   const { data } = await api.get(`/pages?slug=${slug}`);
   return data[0];
 }
+
+// ============= OPTIONAL: WordPress API versions =============
+// Uncomment these if you want to use WordPress API instead of mock data
+
+/*
+export async function getPosts(): Promise<WPPost[]> {
+  const { data } = await api.get('/posts?_embed');
+  return data;
+}
+
+export async function getPostBySlug(slug: string): Promise<WPPost | null> {
+  const { data } = await api.get(`/posts?slug=${slug}&_embed`);
+  return data[0] || null;
+}
+
+export async function getAllSlugs(): Promise<string[]> {
+  const { data } = await api.get('/posts?fields=slug');
+  return data.map((post: any) => post.slug);
+}
+*/
