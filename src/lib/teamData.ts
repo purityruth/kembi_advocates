@@ -37,8 +37,7 @@ export const teamMembers: TeamMember[] = [
     phone: "+254 711 719 401",
     education: [
       "University of Nairobi, LL.B (Hons)",
-      "Kenya School of Law, Diploma in Law",
-      "Harvard Law School, Executive Education",
+      // "Harvard Law School, Executive Education",
     ],
     achievements: [
       "Listed in Chambers Global as a leading individual in Corporate & Commercial Law",
@@ -74,9 +73,8 @@ export const teamMembers: TeamMember[] = [
     email: "njokigachihi@kembi-gituradv.com",
     phone: "+254 711 719 401",
     education: [
-      "University of Warwick, LL.M in International Commercial Law",
       "University of Nairobi, LL.B (Hons)",
-      "Chartered Institute of Arbitrators, Diploma in International Arbitration",
+      "Kenya School of Law — Post Graduate Diploma in Law",
     ],
     achievements: [
       "Recognized by Chambers Global for Dispute Resolution",
