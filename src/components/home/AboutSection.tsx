@@ -120,7 +120,7 @@ const AboutSection = () => {
             {/* CTA Button */}
             <div className="pt-6">
               <Button
-                href="/about-us"
+                href="/about"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-[#0a456e] text-white font-semibold text-base tracking-wide hover:bg-[#0a456e]/90 transition-all duration-300 border border-[#d9d9d9]/20"
               >
                 <span>Learn More About Our Firm</span>

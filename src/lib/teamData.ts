@@ -37,7 +37,7 @@ export const teamMembers: TeamMember[] = [
     phone: "+254 711 719 401",
     education: [
       "University of Nairobi, LL.B (Hons)",
-      // "Harvard Law School, Executive Education",
+      "Kenya School of Law — Post Graduate Diploma in Law",
     ],
     achievements: [
       "Listed in Chambers Global as a leading individual in Corporate & Commercial Law",
@@ -68,7 +68,7 @@ export const teamMembers: TeamMember[] = [
     title: "Managing Partner",
     position: "Managing Partner",
     description: "Managing Partner specializing in commercial litigation and arbitration.",
-    bio: "Njoki Gachihi is a distinguished advocate with over 20 years of experience in commercial litigation and international arbitration. As Managing Partner, she oversees the firm's strategic direction while maintaining an active practice representing clients in high-stakes disputes. Njoki is recognized for her analytical rigor, strategic approach, and ability to navigate complex commercial conflicts. She has successfully represented clients before Kenyan courts, the East African Court of Justice, and various international arbitral tribunals.",
+    bio: "Njoki Gachihi is a distinguished advocate with over 20 years of experience in commercial litigation and international arbitration. As Managing Partner, she oversees the firm's strategic direction while maintaining an active practice representing clients in high-stakes disputes. Njoki is recognized for her analytical rigor, strategic approach, and ability to navigate complex commercial conflicts.",
     image: "/images/team/Njoki.webp",
     email: "njokigachihi@kembi-gituradv.com",
     phone: "+254 711 719 401",
