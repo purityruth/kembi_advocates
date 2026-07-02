@@ -40,7 +40,7 @@ const ContactSection = () => {
                   <h4 className="font-semibold text-gray-900 text-lg">
                     Call Us
                   </h4>
-                  <p className="text-gray-800 font-medium">+254 700 000 000</p>
+                  <p className="text-gray-800 font-medium">+254 711 719 401 / +254 788 551 401</p>
                 </div>
               </div>
 
@@ -52,7 +52,7 @@ const ContactSection = () => {
                     Email Us
                   </h4>
                   <p className="text-gray-800 font-medium">
-                    info@kembigituralaw.com
+                    law@kembi-gituradv.com
                   </p>
                 </div>
               </div>

@@ -174,7 +174,7 @@ export default async function PracticeAreaPage({
               </div>
 
               {/* Key Contacts */}
-              <div className="bg-gray-50 p-6 border border-[#d9d9d9]/30 mb-8">
+              {/* <div className="bg-gray-50 p-6 border border-[#d9d9d9]/30 mb-8">
                 <h3 className="text-xl font-serif font-bold text-[#0a456e] mb-4">
                   Key Contacts
                 </h3>
@@ -201,7 +201,7 @@ export default async function PracticeAreaPage({
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Download Resources */}
               <div className="bg-gray-50 p-6 border border-[#d9d9d9]/30">

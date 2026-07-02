@@ -45,10 +45,10 @@ export default function ContactForm() {
               <strong>📍 Address:</strong> Nairobi, Kenya
             </p>
             <p>
-              <strong>📞 Phone:</strong> +254 700 000000
+              <strong>📞 Phone:</strong> +254 711 719 401 / +254 788 551 401
             </p>
             <p>
-              <strong>✉️ Email:</strong> info@kembigituralaw.com
+              <strong>✉️ Email:</strong> law@kembi-gituradv.com
             </p>
           </div>
         </div>
